@@ -15,4 +15,9 @@ addons:
 
 script: 
   sudo service slapd stop
+  sleep 3
   sudo slapadd -l ./light_db.ldif
+  sleep 3
+  sudo service slapd restart
+  sleep 3
+  ldapsearch -D cn=admin,dc=demoApp,dc=com -w secret -b dc=demoApp,dc=com
