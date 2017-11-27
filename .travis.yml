@@ -16,7 +16,7 @@ addons:
 script: 
   sudo service slapd stop
   sleep 3
-  sudo slapadd -l ./light_db.ldif
+  sudo slapadd -l ./backup.ldif
   sleep 3
   sudo service slapd restart
   sleep 3
