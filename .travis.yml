@@ -11,3 +11,4 @@ addons:
       - g++-7
       - ldap-utils
       - slapd
+      - libldap2-dev
