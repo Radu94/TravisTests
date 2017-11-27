@@ -14,4 +14,4 @@ addons:
       - libldap2-dev
 
 script: 
-  service slapd status
+  sudo service slapd status
