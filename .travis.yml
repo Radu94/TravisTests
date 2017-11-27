@@ -12,3 +12,6 @@ addons:
       - ldap-utils
       - slapd
       - libldap2-dev
+
+script: 
+  service slapd status

@@ -4,8 +4,12 @@ const should = require('should');
 
 describe('Suite of tests for compatible software versions', () => {
 
-    should(true).be.ok;
+    it('node version should be above 6',(done)=> {
+        process.versions.node.should.be.above('6');
+        done();
 
+    });
+   
 });
 
 
@@ -15,3 +19,4 @@ describe('Suite of tests for compatible software versions', () => {
 
 
    
+
