@@ -4,7 +4,7 @@
   "description": "Small test package for travis integration",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "istanbul test \"./node_modules/mocha/bin/_mocha\" ./test/*.js"
   },
   "repository": {
     "type": "git",
