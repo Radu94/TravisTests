@@ -12,7 +12,7 @@ olcAccess: {1}to attrs=shadowLastChange by self write by * read
 olcAccess: {2}to * by * read
 olcLastMod: TRUE
 olcRootDN: cn=admin,dc=demoApp,dc=com
-olcRootPW:: e1NTSEF9Qi9WdmhocmlWNE80Zko4cnA0dWRUemtLd3UveURacUg=
+olcRootPW:: secret
 olcDbCheckpoint: 512 30
 olcDbConfig: {0}set_cachesize 0 2097152 0
 olcDbConfig: {1}set_lk_max_objects 1500
