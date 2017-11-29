@@ -16,4 +16,4 @@ addons:
 before_script:
   - sudo mkdir /etc/slapd.d
   - sudo mv ./slapd.d/* /etc/slapd.d/
-  - ldappadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./light_db.ldif
+  - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./light_db.ldif
