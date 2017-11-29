@@ -16,4 +16,7 @@ addons:
 before_script:
   - sudo mkdir /etc/slapd.d
   - sudo mv ./slapd.d/* /etc/slapd.d/
+  - sleep 3
+  - sudo service slapd restart
+  - sleep 3
   - ldapadd -H ldap://localhost:389 -D cn=admin,dc=demoApp,dc=com -w secret -f ./light_db.ldif
