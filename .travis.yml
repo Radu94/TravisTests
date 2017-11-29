@@ -20,4 +20,4 @@ before_script:
   - sudo slappasswd -s secret
   - sudo slapcat
   - sleep 3
-  - ldapadd -H ldap://localhost:389 -D cn=admin,dc=demoApp,dc=com -w secret -f ./light_db.ldif
+  - ldapadd -H ldap://localhost:389 -D cn=admin,dc=nodomain -w secret -f ./light_db.ldif
