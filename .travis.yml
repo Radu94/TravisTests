@@ -16,4 +16,4 @@ addons:
 before_script:
   - sudo slapd -f ./test/ldifs/slapd.conf -h ldap://localhost:389 &
   - sleep 3
-  - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./light_db.ldif
+  - ldapadd -H ldap://localhost:389 -D cn=admin,dc=demoApp,dc=com -w secret -f ./light_db.ldif
