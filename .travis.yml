@@ -14,7 +14,6 @@ addons:
       - libldap2-dev
 
 before_script:
-  - sudo mkdir /tmp/slapd
-  - sudo slapd -f ./test/ldifs/slapd.conf
+  - sudo slapd -f ./test/ldifs/slapd.conf -h ldap://localhost:389 &
   - sleep 3
   - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./light_db.ldif
