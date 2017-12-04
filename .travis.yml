@@ -15,6 +15,6 @@ addons:
 
 before_script:
   - sudo mkdir /usr/local/var/openldap-data -p
-  -   slapadd -n 0 -F /usr/local/etc/slapd.d -l ./slapd.ldif
-  -   slapd -F /usr/local/etc/slapd.d
+  - slapadd -n 0 -F etc/ldap/slapd.d -l ./slapd.ldif
+  - slapd -F /etc/ldap/slapd.d
   - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret ./backup.ldif
