@@ -21,4 +21,4 @@ before_script:
   - sleep 2
   - slapd -F /etc/ldap/slapd.d &
   - sleep 2
-  - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret ./backup.ldif
+  - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./backup.ldif
