@@ -1,1 +1,1 @@
-# TravisTests [![Build Status](https://travis-ci.com/Radu94/TravisTests.svg?token=zxxmtCZqitQKCwKzfiCX&branch=featuretravisTest)](https://travis-ci.com/Radu94/TravisTests)
+# TravisTests [![Build Status](https://travis-ci.org/Radu94/TravisTests.svg?branch=featuretravisTest)](https://travis-ci.org/Radu94/TravisTests)
