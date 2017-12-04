@@ -1,7 +1,7 @@
-dn: olcDatabase=mdb,cn=config 
+dn: olcDatabase=bdb,cn=config 
 objectClass: olcDatabaseConfig 
-objectClass: olcMdbConfig 
-olcDatabase: mdb 
+objectClass: olcBdbConfig 
+olcDatabase: bdb 
 OlcDbMaxSize: 1073741824 
 olcSuffix: dc=demoApp,dc=com
 olcRootDN: cn=admin,dc=demoApp,dc=com 
