@@ -19,7 +19,9 @@ before_script:
   - sleep 2
   - sudo slapcat 
   - sudo service slapd stop &
-  - sudo slapadd  -F /etc/ldap/slapd.d  -l ./settings.ldif &
+  - sudo rm -R /etc/ldap/slapd.d
+  - sudo mkdir /etc/ldap/slapd.d
+  - sudo slapadd -n 0 -F /etc/ldap/slapd.d  -l ./settings.ldif &
   - sleep 2
   - sudo service slapd start &
   - slapd -F /etc/ldap/slapd.d &
