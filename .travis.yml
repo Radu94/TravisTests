@@ -17,6 +17,7 @@ before_script:
   #- ls  /etc/ldap/slapd.d/
   - sudo mkdir /usr/local/var/openldap-data -p &
   - sleep 2
+  - sudo slapcat -n0
   - sudo service slapd stop &
   - sudo slapadd -n 0 -F /etc/ldap/slapd.d  -l ./settings.ldif &
   - sleep 2
