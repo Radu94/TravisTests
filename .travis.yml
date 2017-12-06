@@ -15,11 +15,11 @@ addons:
 
 before_script:
   #- ls  /etc/ldap/slapd.d/
-  - sudo mkdir /usr/local/var/openldap-data -p &
+  - sudo mkdir /usr/local/var/openldap-data -p 
   - sudo service slapd stop 
   - sudo rm -R /etc/ldap/slapd.d
   - sudo mkdir /etc/ldap/slapd.d
-  - sudo slapadd  -F /etc/ldap/slapd.d -b cn=config -l ./settings.ldif
+  - sudo slapadd  -F /etc/ldap/slapd.d  -l ./settings.ldif
   - sudo slapcat 
   - sudo service slapd start
   - sudo service slapd status
