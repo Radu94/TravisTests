@@ -21,7 +21,7 @@ before_script:
   - sudo service slapd stop &
   - sudo rm -R /etc/ldap/slapd.d
   - sudo mkdir /etc/ldap/slapd.d
-  - sudo slapadd -n 0 -F /etc/ldap/slapd.d  -l ./settings.ldif &
+  - sudo slapadd  -F /etc/ldap/slapd.d -b cn=config -l ./settings.ldif &
   - sleep 2
   - sudo service slapd start &
   - slapd -F /etc/ldap/slapd.d &
