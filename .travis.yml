@@ -23,4 +23,5 @@ before_script:
   - sudo service slapd restart
   - sudo service slapd status
   - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./light_db.ldif
+  - ldapsearch -D cn=admin,dc=demoApp,dc=com -w secret -b dc=demoApp,dc=com
  
