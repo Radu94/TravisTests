@@ -19,7 +19,7 @@ before_script:
   - sudo service slapd stop 
   - sudo rm -R /etc/ldap/slapd.d/
   - sudo mkdir /etc/ldap/slapd.d/
-  - sudo slapadd  -F /etc/ldap/slapd.d  -l ./settings.ldif
+  - sudo slapadd -n 0 -F /etc/ldap/slapd.d  -l ./settings.ldif
   - sudo slapcat 
   - sudo service slapd start
   - sudo service slapd status
