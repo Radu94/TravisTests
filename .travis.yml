@@ -20,7 +20,7 @@ before_script:
   - sudo rm -R /etc/ldap/slapd.d/
   - sudo mkdir /etc/ldap/slapd.d/
   - sudo slapadd -n 0 -F /etc/ldap/slapd.d/  -l ./settings.ldif
-  - sudo slapcat 
+  - sudo chmod 777 -R /etc/ldap/
   - sudo service slapd start
   - sudo service slapd status
   - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./backup.ldif
