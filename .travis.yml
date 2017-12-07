@@ -22,4 +22,4 @@ before_script:
   - sudo chmod 777 -R /etc/ldap/
   - sudo service slapd restart
   - sudo service slapd status
-  - sudo slapcat
+  - ldapsearch -D cn=admin,dc=demoApp,dc=com -w secret -b dc=demoApp,dc=com
