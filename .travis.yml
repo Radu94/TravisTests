@@ -14,7 +14,6 @@ addons:
       - libldap2-dev
 
 before_script:
-  #- ls  /etc/ldap/slapd.d/
   - sudo mkdir /usr/local/var/openldap-data -p 
   - sudo service slapd stop 
   - sudo rm -R /etc/ldap/slapd.d/
@@ -23,6 +22,4 @@ before_script:
   - sudo chmod 777 -R /etc/ldap/
   - sudo service slapd start
   - sudo service slapd status
-  - ldapsearch -D cn=admin,dc=demoApp,dc=com -w secret -b dc=demoApp,dc=com
-  - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./backup.ldif
-  - ldapsearch -D cn=admin,dc=demoApp,dc=com -w secret -b dc=demoApp,dc=com
+  - sudo slapcat
