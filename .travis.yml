@@ -14,14 +14,12 @@ addons:
       - libldap2-dev
 
 before_script:
-  - sudo mkdir /usr/local/var/openldap-data -p 
   - sudo service slapd stop 
   - sudo rm -R /etc/ldap/slapd.d/
   - sudo mkdir /etc/ldap/slapd.d/
   - sudo slapadd -F /etc/ldap/slapd.d/ -n 0 -l ./n0config.ldif
   - sudo chmod 777 -R /etc/ldap/
   - sudo service slapd restart
-  - sudo service slapd status
   - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./light_db.ldif
   - ldapsearch -D cn=admin,dc=demoApp,dc=com -w secret -b dc=demoApp,dc=com
  
