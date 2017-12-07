@@ -24,3 +24,4 @@ before_script:
   - sudo service slapd start
   - sudo service slapd status
   - ldapadd -D cn=admin,dc=demoApp,dc=com -w secret -f ./backup.ldif
+  - ldapsearch -D cn=admin,dc=demoApp,dc=com -w secret -b dc=demoApp,dc=com
