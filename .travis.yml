@@ -18,7 +18,7 @@ before_script:
   - sudo mkdir /usr/local/var/openldap-data -p 
   - sudo service slapd stop 
   - sudo rm -R /etc/ldap/slapd.d/
-  - sudo mkdir /etc/ldap/slap.d/
+  - sudo mkdir /etc/ldap/slapd.d/
   - sudo slapadd  -F /etc/ldap/slapd.d  -l ./settings.ldif
   - sudo slapcat 
   - sudo service slapd start
