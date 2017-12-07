@@ -20,6 +20,6 @@ before_script:
   - sudo mkdir /etc/ldap/slapd.d/
   - sudo slapadd -n 0 -F /etc/ldap/slapd.d/  -l ./settings.ldif
   - sudo chmod 777 -R /etc/ldap/
-  - sudo service slapd start
+  - sudo service slapd restart
   - sudo service slapd status
   - sudo slapcat
